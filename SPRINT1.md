@@ -91,7 +91,7 @@ Estruturas em formato `.json` para os métodos principais.
   "universidade": "Universidade Exemplo",
   "campus": "Campus Central",
   "cnpj": "00000000000100",
-  "created_at": "2026-05-22T19:52:25Z"
+  "timestamp_ingestao": "2026-05-22T19:52:25Z"
 }
 
 ```
@@ -135,22 +135,22 @@ Estruturas em formato `.json` para os métodos principais.
 ```json
 {
   "id_atletica": "123e4567-e89b-12d3-a456-426614174000",
-  "nome": "Ciclano de Oliveira",
-  "ra": "a8765432",
-  "cpf": "98765432100",
-  "documento_pessoal": "https://storage.exemplo.com/docs/rg_ciclano.pdf",
-  "curso": "Engenharia de Software",
-  "cargo": "Diretora de Esportes",
-  "tempo_atletica_inicio": "2024-02-15",
-  "tempo_atletica_fim_esperado": "2026-12-20",
-  "data_nascimento": "2003-05-12",
-  "inicio_egresso": "2022-02-10",
-  "periodo_atual": 5,
-  "tempo_esperado_conclusao": "2026-12",
-  "documentos_universidade": [
+  "atletas": [
     {
-      "tipo": "comprovante_matricula",
-      "url": "https://storage.exemplo.com/docs/matricula_ciclano.pdf"
+      "nome": "Fulano de Tal",
+      "ra": "a1234567",
+      "cpf": "12345678901",
+      "curso": "Engenharia Civil",
+      "nascimento": "2004-07-07",
+      "egresso": "2022-03-17",
+      "periodo": 8,
+      "conclusao": "2027-01",
+      "documentos": [
+        {
+          "tipo": "comprovante_matricula",
+          "url": "https://storage.exemplo.com/docs/matricula_fulano_de_tal.pdf"
+        }
+      ]
     }
   ]
 }
@@ -203,8 +203,7 @@ Estruturas em formato `.json` para os métodos principais.
   "atletas_inscritos": [
     "987fcdeb-51a2-43d7-9012-426614174000",
     "654abcef-51a2-43d7-9012-426614174111"
-  ],
-  "created_at": "2026-05-22T19:52:25Z"
+  ]
 }
 
 ```
@@ -245,10 +244,10 @@ Estruturas em formato `.json` para os métodos principais.
 ```json
 {
   "id_atletica": "123e4567-e89b-12d3-a456-426614174000",
-  "nome": "Ciclano",
-  "ra": "a1234567",
-  "cpf": "12345678901",
-  "documento_pessoal": "[https://storage.exemplo.com/docs/rg_mariana.pdf](https://storage.exemplo.com/docs/rg_mariana.pdf)",
+  "nome": "Ciclano de Oliveira",
+  "ra": "a8765432",
+  "cpf": "98765432100",
+  "documento_pessoal": "https://storage.exemplo.com/docs/rg_ciclano.pdf",
   "curso": "Engenharia de Software",
   "cargo": "Diretora de Esportes",
   "tempo_atletica_inicio": "2024-02-15",
@@ -260,10 +259,9 @@ Estruturas em formato `.json` para os métodos principais.
   "documentos_universidade": [
     {
       "tipo": "comprovante_matricula",
-      "url": "[https://storage.exemplo.com/docs/matricula_mariana.pdf](https://storage.exemplo.com/docs/matricula_mariana.pdf)"
+      "url": "https://storage.exemplo.com/docs/matricula_ciclano.pdf"
     }
-  ],
-  "created_at": "2026-05-22T20:00:00Z"
+  ]
 }
 
 ```
@@ -311,8 +309,7 @@ Estruturas em formato `.json` para os métodos principais.
     "654abcef-51a2-43d7-9012-426614174111",
     "111bcdef-51a2-43d7-9012-426614174222"
   ],
-  "status_treino": "CONFIRMADO",
-  "updated_at": "2026-05-22T20:15:00Z"
+  "status_treino": "CONFIRMADO"
 }
 
 ```
@@ -372,8 +369,7 @@ Estruturas em formato `.json` para os métodos principais.
   "locais": [
     "Ginásio Municipal", 
     "Centro de Esportes Universitário"
-  ],
-  "created_at": "2026-05-22T20:30:00Z"
+  ]
 }
 
 ```
