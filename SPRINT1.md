@@ -5,10 +5,15 @@
 
 **Questionários:**
 - Como é feito hoje o sistema de cadastro de estudante para campeonatos?
+  -  É enviado a declaração de matrícula através do Whatsapp e formulário. 
 - Como o atleta faz a inscrição para campeonatos hoje?
+  - Compra o pacote dos jogos e envia a declaração de matrícula.
 - Onde estão armazenadas as informações dos atletas?
+  - Em drive de esportes. 
 - Onde é feita a coleta de atletas disponíveis para os campeonatos?
+  - Eles comparecem ao treino e o treinador os convoca via Whatsapp 
 - Como é feita a gerência de treinadores e treinos hoje?
+  - Tudo informalmente através do Whatsapp 
 
 ---
 
