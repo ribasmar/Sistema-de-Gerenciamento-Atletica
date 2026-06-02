@@ -4,19 +4,63 @@
 ## 1. Roteiro e síntese da elicitação realizada (entrevistas, questionários ou análise de similares)
 
 **Questionários:**
+#### Entrevistado: Ex-Presidente da Atletica XII de Março, da UTFPR - Campus Apucarana
 - Como é feito hoje o sistema de cadastro de estudante para campeonatos?
-  -  É enviado a declaração de matrícula através do Whatsapp e formulário. 
-- Como o atleta faz a inscrição para campeonatos hoje?
-  - Compra o pacote dos jogos e envia a declaração de matrícula.
-- Onde estão armazenadas as informações dos atletas?
-  - Em drive de esportes. 
-- Onde é feita a coleta de atletas disponíveis para os campeonatos?
-  - Eles comparecem ao treino e o treinador os convoca via Whatsapp 
-- Como é feita a gerência de treinadores e treinos hoje?
-  - Tudo informalmente através do Whatsapp
- 
- #### Entrevistado: Ex-Presidente de atlética [UTFPR].
 
+    R: É enviado a declaração de matrícula através do Whatsapp e formulário. 
+- Como o atleta faz a inscrição para campeonatos hoje?
+
+    R:  Compra o pacote dos jogos e envia a declaração de matrícula.
+- Onde estão armazenadas as informações dos atletas?
+
+    R:  Em drive de esportes. 
+- Onde é feita a coleta de atletas disponíveis para os campeonatos?
+
+    R:  Eles comparecem ao treino e o treinador os convoca via Whatsapp 
+- Como é feita a gerência de treinadores e treinos hoje?
+
+    R: Tudo informalmente através do Whatsapp
+
+
+#### Entrevistado:  Ex-Presidente da VII de Abril, UNIFIL - Campus Londrina 
+- Como é feito hoje o sistema de cadastro de estudante para campeonatos?
+
+   R: Hoje, a VII de Abril participa apenas de jogos universitários, mas ja chegou a participar de jogos abertos, como o de Cambé, é feita uma lista com nome, curso e numero de matricula dos atletas, se é formado ou estuda a distância, dependendo da necessidade, constamos na lista, as informações são conferidas por declaração de matricula emitida pelo proprio aluno, ou diploma.
+
+- Como o atleta faz a inscrição para campeonatos hoje?
+
+   R: Os diretores responsáveis pela área esportiva junto dos presidentes fazem a coleta de dados e preenchem a lista pra ser mandada para o responsável pelo campeonato.
+
+- Onde estão armazenadas as informações dos atletas?
+
+   R: Nas próprias declarações de matricula ou diploma.
+
+- Onde é feita a coleta de atletas disponíveis para os campeonatos?
+
+   R: Na própria faculdade, ou em treinos que disponibilizamos para os interessados, conforme a quantidade, é feita uma seletiva, e o técnico escolhe os jogadores titulares e reservas.
+
+- Como é feita a gerência de treinadores e treinos hoje?
+
+   R: A diretoria de esportes é dividida em modalidades, e cada diretor organiza os treinos pré planejados no inicio do ano, conforme a divisão de dias de posse de quadras, entre nós e a outra atletica pertencente a faculdade. Os treinos funcionam em forma de “racha”, é dividido o valor do tecnico por treino, entre os atletas presentes naquele dia, através de listas passadas em grupos segmentados no WhatsApp, o pagamento é feito  pelo financeiro todo dia 10 de cada mês, ou conforme a necessidade e solicitação do tecnico.
+
+#### Entrevistado: Ex-Vice Presidente da Exatas UEL - Campus Londrina
+- Como é feito hoje o sistema de cadastro de estudante para campeonatos?
+
+   R: Lista de alunos do centro representado pela atlética emitida pela universidade e comprovante de matrícula (pedimos individual pra cada atleta)
+- Como o atleta faz a inscrição para campeonatos hoje?
+  
+   R: Só vai com o RG em mãos e fazemos o resto
+
+- Onde estão armazenadas as informações dos atletas?
+
+   R: Arquivos físicos que são queimados depois de usados (no caso os do jia do ano passado estao cmg e não queimei ainda kkkkkk)
+
+- Onde é feita a coleta de atletas disponíveis para os campeonatos?
+
+   R: ⁠Passamos nas salas de primeiro ano pessoalmente  
+- Como é feita a gerência de treinadores e treinos hoje?
+
+   R: 1 assessor de esportes responsável por cada modalidade, o diretor acompanha e auxilia as modalidades que precisam, os custos de treinador e quadra são rachados entre os atletas da modalidade
 ---
 
 ## 2. Histórias de usuário finalizadas com critérios de aceitação e priorização
