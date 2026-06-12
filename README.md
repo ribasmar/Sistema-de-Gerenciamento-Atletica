@@ -110,6 +110,32 @@ O sistema será utilizado principalmente por:
 #### Tiene
 #### Ribas
 
+---
+
+## Como Executar
+
+Fluxo completo por JSON:
+
+```bash
+python codigo/app.py executar-fluxo --input codigo/dados_demo.json
+```
+
+Menu interativo:
+
+```bash
+python codigo/app.py menu
+```
+
+Ao cadastrar atleta ou membro pelo menu, e possivel enviar uma declaracao de
+matricula em HTML. Os dados extraidos do HTML nao sao pedidos novamente no
+cadastro.
+
+Importacao de declaracao de matricula em HTML:
+
+```bash
+python codigo/app.py importar-declaracao-html --input codigo/declaracao_exemplo.html
+```
+
 <!-- 
 ---
 

@@ -192,7 +192,7 @@ Estruturas em formato `.json` para os métodos principais.
       "documentos": [
         {
           "tipo": "comprovante_matricula",
-          "url": "https://storage.exemplo.com/docs/matricula_fulano_de_tal.pdf"
+          "path": "codigo/data/Declaração Matrícula.html"
         }
       ]
     }
@@ -291,7 +291,7 @@ Estruturas em formato `.json` para os métodos principais.
   "nome": "Ciclano de Oliveira",
   "ra": "a8765432",
   "cpf": "98765432100",
-  "documento_pessoal": "https://storage.exemplo.com/docs/rg_ciclano.pdf",
+  "documento_pessoal": "codigo/data/documento_pessoal_exemplo.txt",
   "curso": "Engenharia de Software",
   "cargo": "Diretora de Esportes",
   "tempo_atletica_inicio": "2024-02-15",
@@ -303,7 +303,7 @@ Estruturas em formato `.json` para os métodos principais.
   "documentos_universidade": [
     {
       "tipo": "comprovante_matricula",
-      "url": "https://storage.exemplo.com/docs/matricula_ciclano.pdf"
+      "path": "codigo/data/Declaração Matrícula-Pedro.html"
     }
   ]
 }

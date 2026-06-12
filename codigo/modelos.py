@@ -23,12 +23,12 @@ class Documento:
     """Documento associado a um aluno, atleta ou membro da atletica."""
 
     tipo: str
-    url: str
+    path: str
 
     @classmethod
     def de_dict(cls, dados: dict[str, Any]) -> "Documento":
         """Cria um documento a partir de um dicionario."""
-        return cls(tipo=dados["tipo"], url=dados["url"])
+        return cls(tipo=dados["tipo"], path=dados["path"])
 
 
 @dataclass

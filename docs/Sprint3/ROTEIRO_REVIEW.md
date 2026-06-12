@@ -6,6 +6,28 @@
 python codigo/app.py executar-fluxo --input codigo/dados_demo.json
 ```
 
+## Menu interativo
+
+```bash
+python codigo/app.py menu
+```
+
+O menu permite escolher o cadastro desejado:
+
+- atletica;
+- atleta;
+- membro da atletica;
+- treinador;
+- treino;
+- campeonato;
+- atualizacao de treino;
+- importacao de declaracao HTML.
+
+Nos cadastros de atleta e membro, responda `s` quando o sistema perguntar se
+deseja enviar uma declaracao de matricula em HTML. O parser preenche nome, RA,
+curso, periodo e data de ingresso com os dados extraidos do arquivo. Esses
+campos sao exibidos como extraidos do HTML e nao sao solicitados novamente.
+
 ## Comando para importar HTML
 
 ```bash

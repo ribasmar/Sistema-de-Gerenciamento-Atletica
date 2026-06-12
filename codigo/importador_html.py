@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 from html.parser import HTMLParser
+from pathlib import Path
 
 
 class ExtratorTextoHTML(HTMLParser):
@@ -107,8 +108,23 @@ def extrair_ra(texto: str) -> str:
     return ""
 
 
+def normalizar_caminho(caminho: str) -> str:
+    """Normaliza caminhos digitados no terminal, inclusive com aspas ou mojibake."""
+    caminho = caminho.strip().strip("'\"")
+    if Path(caminho).exists():
+        return caminho
+
+    try:
+        reparado = caminho.encode("latin-1").decode("utf-8")
+    except UnicodeError:
+        return caminho
+
+    return reparado if Path(reparado).exists() else caminho
+
+
 def ler_html(caminho: str, encoding: str = "auto") -> str:
     """Le o HTML detectando encoding quando necessario."""
+    caminho = normalizar_caminho(caminho)
     with open(caminho, "rb") as arquivo:
         conteudo = arquivo.read()
 

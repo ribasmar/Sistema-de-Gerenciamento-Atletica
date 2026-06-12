@@ -33,6 +33,19 @@ Execute, a partir da raiz do repositorio:
 python codigo/app.py demo
 ```
 
+Para usar o menu interativo:
+
+```bash
+python codigo/app.py menu
+```
+
+No menu, e possivel escolher se deseja cadastrar atletica, atleta, membro da
+atletica, treinador, treino ou campeonato, alem de atualizar treinos e importar
+declaracoes HTML. Nos cadastros de atleta e membro da atletica, o sistema
+pergunta se deseja enviar uma declaracao de matricula em HTML. Quando o HTML e
+enviado, os campos nome, RA, curso, periodo e data de ingresso sao usados
+automaticamente e nao sao perguntados novamente.
+
 Ou usando um arquivo JSON de entrada:
 
 ```bash

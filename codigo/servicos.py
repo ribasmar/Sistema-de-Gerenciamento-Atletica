@@ -295,9 +295,23 @@ class CampeonatoService:
 
     def criar(self, dados: dict[str, Any]) -> ResultadoOperacao:
         """Cria um campeonato validando datas e referencias."""
-        if date.fromisoformat(dados["datas"]["fim"]) < date.fromisoformat(
-            dados["datas"]["inicio"]
-        ):
+        try:
+            data_inicio = date.fromisoformat(dados["datas"]["inicio"])
+            data_fim = date.fromisoformat(dados["datas"]["fim"])
+        except ValueError:
+            return ResultadoOperacao(
+                1,
+                "ERRO_VALIDACAO",
+                "criar-campeonato",
+                erros=[
+                    {
+                        "contexto": "datas",
+                        "motivo": "As datas devem usar o formato AAAA-MM-DD.",
+                    }
+                ],
+            )
+
+        if data_fim < data_inicio:
             return ResultadoOperacao(
                 1,
                 "ERRO_VALIDACAO_LOGICA",
