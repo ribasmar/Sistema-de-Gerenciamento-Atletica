@@ -1,0 +1,101 @@
+{
+  "atletica": {
+    "nome": "Atletica Engenharia",
+    "universidade": "Universidade Exemplo",
+    "campus": "Campus Central",
+    "cnpj": "00000000000100"
+  },
+  "atletas": [
+    {
+      "nome": "Fulano de Tal",
+      "ra": "a1234567",
+      "cpf": "12345678901",
+      "curso": "Engenharia Civil",
+      "nascimento": "2004-07-07",
+      "egresso": "2022-03-17",
+      "periodo": 8,
+      "conclusao": "2027-01",
+      "esportes": ["Futsal Masculino"],
+      "documentos": [
+        {
+          "tipo": "comprovante_matricula",
+          "url": "https://storage.exemplo.com/docs/matricula.pdf"
+        }
+      ]
+    },
+    {
+      "nome": "Beltrana Souza",
+      "ra": "a7654321",
+      "cpf": "98765432109",
+      "curso": "Engenharia de Software",
+      "nascimento": "2003-10-02",
+      "egresso": "2021-03-10",
+      "periodo": 9,
+      "conclusao": "2026-12",
+      "esportes": ["Futsal Masculino"],
+      "documentos": [
+        {
+          "tipo": "comprovante_matricula",
+          "url": "https://storage.exemplo.com/docs/matricula2.pdf"
+        }
+      ]
+    }
+  ],
+  "membro": {
+    "nome": "Ciclano de Oliveira",
+    "ra": "a8765432",
+    "cpf": "98765432100",
+    "documento_pessoal": "https://storage.exemplo.com/docs/rg.pdf",
+    "curso": "Engenharia de Software",
+    "cargo": "Diretor de Esportes",
+    "tempo_atletica_inicio": "2024-02-15",
+    "tempo_atletica_fim_esperado": "2026-12-20",
+    "data_nascimento": "2003-05-12",
+    "inicio_egresso": "2022-02-10",
+    "periodo_atual": 5,
+    "tempo_esperado_conclusao": "2026-12",
+    "documentos_universidade": [
+      {
+        "tipo": "comprovante_matricula",
+        "url": "https://storage.exemplo.com/docs/matricula_membro.pdf"
+      }
+    ]
+  },
+  "treinador": {
+    "nome": "Carlos Oliveira",
+    "cpf": "11122233344",
+    "modalidade": "Futsal Masculino",
+    "salario_por_treino": 120.0,
+    "telefone": "(43) 99999-0000"
+  },
+  "treino": {
+    "modalidade": "Futsal Masculino",
+    "localidade": "Ginasio Principal",
+    "dia_semana": "TERCA_FEIRA",
+    "horario_inicio": "19:00",
+    "horario_fim": "21:00",
+    "atletas_por_ra": ["a1234567", "a7654321"]
+  },
+  "atualizacao_treino": {
+    "localidade": "Quadra Externa B",
+    "horario_inicio": "19:30",
+    "horario_fim": "21:30",
+    "status_treino": "CONFIRMADO",
+    "atletas_por_ra": ["a1234567", "a7654321"]
+  },
+  "campeonato": {
+    "nome_campeonato": "Jogos Universitarios 2026",
+    "modalidades": ["Futsal Masculino"],
+    "atletas_por_ra": ["a1234567", "a7654321"],
+    "transporte": {
+      "tipo": "Onibus Fretado",
+      "data_saida": "2026-06-10T08:00:00Z",
+      "data_retorno": "2026-06-15T22:00:00Z"
+    },
+    "datas": {
+      "inicio": "2026-06-10",
+      "fim": "2026-06-15"
+    },
+    "locais": ["Ginasio Municipal"]
+  }
+}

@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  margin: 0px 20px 20px 20px;
+  border-color: #FFFFFF;
+}
+
+table {
+  font-size: 9pt;
+}
+
+pre {
+  background:#EEEDDD none repeat scroll 0 0;
+  border:1px dashed #666666;
+  font-size:1.1em;
+  line-height:1.1em;
+  overflow:auto;
+  padding:15px 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h2 {
+  font-weight: normal;
+}
+		
+form div {
+  margin: .0em 0;
+} 
+
+fieldset{
+  background-color:#FFFFFF;
+  border-width:1px 0px 1px 0px;
+  border-style:solid;
+  border-color:#074469;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size:08pt;
+  margin:20px 10px 20px 0px;	
+  position:relative;
+  display:block;
+  padding: 0px 10px 10px 10px;
+}
+
+fieldset legend{
+  background-color:#FFFFFF;
+  border-width:1px 1px 1px 1px;
+  border-style:solid;
+  border-color:#333333;
+  color:#000000;
+  font-size:9pt;
+  font-weight:600;
+  padding:3px 5px;
+  margin:0px 0px 2px 0px;
+  position:relative;
+  top: -15px;
+}
+
+table {
+  font-size: 9pt;
+}
+
+.botao{
+  background-color:#20688c;
+  border-width:1px;
+  border-right-color:#666666;
+  border-bottom-color:#666666;	
+  border-left-color:#D7D8D9;
+  border-top-color:#D7D8D9;
+  border-style:solid;
+  font-weight:bold;
+  font-size:80%;
+  color:#08567C;
+  width:auto;
+  padding:2px 4px;
+  margin:0px 0px 0px 0px;
+  background-image:url("/imagem/botonfund.gif");
+}
+
+.botao:hover, .botao:focus{
+  background-color:#FFFFFF;
+  color:#08567C;
+  background-image:none;
+  border-color:#08567C;
+  border-width:1px;
+  background-image:url("/imagem/botonfund2.gif");
+}
+
+.botao:active {
+  background-color:#FFFFFF;
+  color:#08567C;
+  background-image:none;
+  border-color:#08567C;
+  border-width:1px;
+  border-left-color:#666666;
+  border-top-color:#666666;	
+  border-right-color:#D7D8D9;
+  border-bottom-color:#D7D8D9;
+  background-image:url("/imagem/botonfund3.gif");
+}
+
+/* SpryRating.css - version 0.1 - Spry Pre-Release 1.6.1 */
+/* Copyright (c) 2007. Adobe Systems Incorporated. All rights reserved. */
+
+.ratingContainer{
+	float: left;	
+}
+
+.ratingButton{
+ 	 background-repeat: no-repeat;
+	 background-position: center center;
+	 display: none;
+}
+  
+.ratingInitialState .ratingButton,
+.ratingReadOnlyState .ratingButton,
+.ratingRatedState .ratingButton
+{
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+.ratingInitialState input,
+.ratingReadOnlyState input,
+.ratingRatedState input
+{
+	display: none;
+}
+
+.ratingFull{
+	 background-image: url('/imagem/SpryStarFull.gif');
+}
+ 
+.ratingEmpty{
+	 background-image: url('/imagem/SpryStarEmpty.gif');
+}
+ 
+.ratingHalf{
+	 background-image: url('/imagem/SpryStarHalf.gif');
+}
+
+.ratingHover{
+	 background-image: url('/imagem/SpryStarHover.gif');
+	 cursor: pointer;
+}
+
+.ratingReadOnlyState .ratingFull{
+ 	background-image: url('/imagem/SpryStarFullRO.gif');
+}
+
+.ratingReadOnlyState .ratingHalf{
+ 	background-image: url('/imagem/SpryStarHalfRO.gif');
+}
+
+.ratingReadOnlyErrMsg, .ratingRatedMsg{	
+	display: none;
+}
+
+.ratingReadOnlyErrState .ratingReadOnlyErrMsg{
+	display: inline;
+	color: #CC3333;
+	border: 1px solid #CC3333;	
+}
+
+.ratingRatedState .ratingRatedMsg{
+	display: block;
+	color: green;	
+}
+
+.ratingCounter{
+	color: green;
+}
+
+/* quebra de página */
+.quebra {
+   page-break-after: always;
+}
+
+td.td_left {
+text-align:left;
+vertical-align:top;
+}
+td.td_center {
+text-align:center;
+vertical-align:top;
+}
+td.td_right {
+text-align:right;
+vertical-align:top;
+}
+th.th_left {
+text-align:left;
+vertical-align:top;
+}
+th.th_center {
+text-align:center;
+vertical-align:top;
+}
+th.th_right {
+text-align:right;
+vertical-align:top;
+}
+.msg {
+font-size:12px;
+font-weight:bold;
+}
+.msgerr {
+font-size:12px;
+font-weight:bold;
+color: #FF0000;
+}
