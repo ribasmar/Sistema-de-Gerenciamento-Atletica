@@ -1,0 +1,200 @@
+python -m compileall .\codigo
+python .\codigo\app.py executar-fluxo --input .\codigo\dados_demo.json
+python .\codigo\app.py demo
+
+PS C:\Users\ribas\OneDrive\Desktop\faculdade\eng soft\Sistema-de-Gerenciamento-Atletica> python -m compileall .\codigo
+Listing '.\\codigo'...
+Listing '.\\codigo\\data'...
+PS C:\Users\ribas\OneDrive\Desktop\faculdade\eng soft\Sistema-de-Gerenciamento-Atletica> python .\codigo\app.py executar-fluxo --input .\codigo\dados_demo.json
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "inicializar-atletica",
+  "dados_gerados": {
+    "mensagem": "Entidade Atletica inicializada com sucesso.",
+    "id_atletica": "472be5a8-b1ea-4cf6-9932-d92ad6778627"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "cadastrar-atletas",
+  "dados_gerados": {
+    "metricas": {
+      "total_registros_lidos": 2,
+      "total_sucesso": 2,
+      "total_falhas": 0
+    },
+    "importados": [
+      {
+        "ra": "2461650",
+        "id_atleta_gerado": "09f76d75-0c4f-4594-a91e-a9ccb027477d",
+        "status": "REGISTRADO"
+      },
+      {
+        "ra": "2478463",
+        "id_atleta_gerado": "f9c11285-9dd5-4a5c-a6db-90c9f6b02ba2",
+        "status": "REGISTRADO"
+      }
+    ],
+    "rejeitados": []
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "cadastrar-membro",
+  "dados_gerados": {
+    "mensagem": "Membro da gestao da Atletica registrado com sucesso.",
+    "id_membro": "272cc24b-1c77-4173-ab13-34d01f12aa14"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "cadastrar-treinador",
+  "dados_gerados": {
+    "mensagem": "Treinador cadastrado com sucesso.",
+    "id_treinador": "fd48bac7-fd30-467e-8b05-9902fb788683"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "criar-treino",
+  "dados_gerados": {
+    "mensagem": "Agenda de treino estruturada e vinculada com sucesso.",
+    "id_treino": "aaf39cff-ae14-4f47-baa2-5e52b924401c"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "atualizar-treino",
+  "dados_gerados": {
+    "id_treino": "aaf39cff-ae14-4f47-baa2-5e52b924401c",
+    "campos_alterados": [
+      "localidade",
+      "horario_inicio",
+      "horario_fim"
+    ]
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:27",
+  "comando": "criar-campeonato",
+  "dados_gerados": {
+    "mensagem": "Campeonato processado e atletas vinculados com sucesso.",
+    "id_campeonato": "7bae834e-9af9-4749-934e-3106759944a0"
+  }
+}
+{
+  "notificacoes": [
+    "Treino atualizado: aaf39cff-ae14-4f47-baa2-5e52b924401c alterou localidade, horario_inicio, horario_fim."
+  ]
+}
+PS C:\Users\ribas\OneDrive\Desktop\faculdade\eng soft\Sistema-de-Gerenciamento-Atletica> python .\codigo\app.py demo                                           
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "inicializar-atletica",
+  "dados_gerados": {
+    "mensagem": "Entidade Atletica inicializada com sucesso.",
+    "id_atletica": "7c29bd81-1699-41df-bcc6-eedb4931880e"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "cadastrar-atletas",
+  "dados_gerados": {
+    "metricas": {
+      "total_registros_lidos": 2,
+      "total_sucesso": 2,
+      "total_falhas": 0
+    },
+    "importados": [
+      {
+        "ra": "2461650",
+        "id_atleta_gerado": "7f9891a4-d7f8-470a-8b7f-def5f41f3a75",
+        "status": "REGISTRADO"
+      },
+      {
+        "ra": "2478463",
+        "id_atleta_gerado": "900cbdae-42cf-4051-8fbb-c1d93ebb78ca",
+        "status": "REGISTRADO"
+      }
+    ],
+    "rejeitados": []
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "cadastrar-membro",
+  "dados_gerados": {
+    "mensagem": "Membro da gestao da Atletica registrado com sucesso.",
+    "id_membro": "841f41c4-80b4-439d-8ca0-27effd953ea9"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "cadastrar-treinador",
+  "dados_gerados": {
+    "mensagem": "Treinador cadastrado com sucesso.",
+    "id_treinador": "002f4c15-9263-4c6b-b5f5-270ed4941517"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "criar-treino",
+  "dados_gerados": {
+    "mensagem": "Agenda de treino estruturada e vinculada com sucesso.",
+    "id_treino": "e09c249e-f63b-4b7a-81c4-3506547d3906"
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "atualizar-treino",
+  "dados_gerados": {
+    "id_treino": "e09c249e-f63b-4b7a-81c4-3506547d3906",
+    "campos_alterados": [
+      "localidade",
+      "horario_inicio",
+      "horario_fim"
+    ]
+  }
+}
+{
+  "exit_code": 0,
+  "status": "SUCESSO",
+  "timestamp_execucao": "2026-06-12T15:55:29",
+  "comando": "criar-campeonato",
+  "dados_gerados": {
+    "mensagem": "Campeonato processado e atletas vinculados com sucesso.",
+    "id_campeonato": "b32ab6af-9c4e-42a6-b2cf-0d7bf9233b39"
+  }
+}
+{
+  "notificacoes": [
+    "Treino atualizado: e09c249e-f63b-4b7a-81c4-3506547d3906 alterou localidade, horario_inicio, horario_fim."
+  ]
+}
+PS C:\Users\ribas\OneDrive\Desktop\faculdade\eng soft\Sistema-de-Gerenciamento-Atletica> 
