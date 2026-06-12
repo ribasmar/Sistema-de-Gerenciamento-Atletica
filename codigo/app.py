@@ -89,6 +89,26 @@ def resumo_sessao(app: Aplicacao) -> str:
     )
 
 
+def id_curto(valor: str) -> str:
+    """Mostra apenas o inicio do identificador para leitura no menu."""
+    return valor[:8]
+
+
+def texto_lista(valores: list[str]) -> str:
+    """Formata uma lista curta para exibicao no terminal."""
+    return ", ".join(valores) if valores else "-"
+
+
+def imprimir_vazio(rotulo: str) -> None:
+    """Mostra uma mensagem de lista vazia."""
+    print(f"  Nenhum {rotulo} cadastrado.")
+
+
+def imprimir_linha(chave: str, valor: str) -> None:
+    """Imprime um campo alinhado em uma tela de resumo."""
+    print(f"  {chave:<18} {valor}")
+
+
 def carregar_json(caminho: str) -> dict[str, Any]:
     """Carrega um arquivo JSON."""
     return json.loads(Path(caminho).read_text(encoding="utf-8"))
