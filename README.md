@@ -119,7 +119,7 @@ Os dados das entidades sao recebidos por arquivos CSV (um por entidade) na pasta
 e gera um relatorio Markdown com os dados gerenciados da atletica:
 
 ```bash
-python codigo/app.py processar-csv
+python codigo/app.py
 ```
 
 Saida padrao: `codigo/data/relatorio_atletica.md`. As colunas e convencoes de cada
@@ -130,17 +130,33 @@ pela coluna `comprovante_matricula`, e o sistema le apenas arquivos contidos na
 pasta `codigo/data/` (sem caminho absoluto e sem path traversal). O CSV e a fonte
 autoritativa; o HTML apenas preenche campos academicos deixados em branco.
 
-Menu interativo:
+Para escolher outra pasta de CSVs ou outro arquivo de saida:
 
 ```bash
-python codigo/app.py menu
+python codigo/app.py --dir codigo/data/mocks --output codigo/data/mocks/relatorio_mock.md
 ```
 
-Importacao avulsa de declaracao de matricula em HTML:
+---
 
-```bash
-python codigo/app.py importar-declaracao-html --input codigo/declaracao_exemplo.html
-```
+## Decisões de Projeto
+
+- **Entrada por CSV (uma planilha por entidade)** e **saída em relatório Markdown**:
+  um único fluxo de processamento, sem interface gráfica, em Python puro.
+- **Referências por chave natural** entre entidades (treinador por CPF, atleta por
+  RA), evitando expor identificadores internos nos CSVs.
+- **Declaração de matrícula (HTML) enviada à parte**, referenciada pelo CSV e lida
+  de forma contida (sem caminho absoluto e sem path traversal); o CSV é a fonte
+  autoritativa e o HTML só preenche campos vazios.
+- **Armazenamento em memória** isolado pela camada Repository, mantendo o protótipo
+  simples e os testes determinísticos.
+- **Padrões de projeto:** Service Layer (`servicos.py`), Repository
+  (`repositorios.py`) e Observer (`eventos.py`).
+
+## Documentação
+
+- [`docs/requisitos.md`](docs/requisitos.md) — elicitação, histórias de usuário e validação.
+- [`docs/arquitetura.md`](docs/arquitetura.md) — arquitetura, componentes, padrões e trade-offs.
+- [`docs/testes.md`](docs/testes.md) — estratégia de testes, cobertura e lacunas.
 
 <!-- 
 ---

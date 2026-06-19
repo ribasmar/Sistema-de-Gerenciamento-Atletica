@@ -132,5 +132,5 @@ treinos e campeonatos, notificações e um log de processamento.
 Execução, a partir de `codigo/`:
 
 ```bash
-python app.py processar-csv --dir data/forms --output data/relatorio_atletica.md
+python app.py --dir data/forms --output data/relatorio_atletica.md
 ```

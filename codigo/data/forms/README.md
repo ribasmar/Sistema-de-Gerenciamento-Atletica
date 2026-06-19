@@ -1,8 +1,8 @@
 # Formulários CSV de entrada
 
 Cada arquivo `.csv` desta pasta representa as respostas de um formulário para uma
-entidade do sistema. O comando `processar-csv` lê todos eles e gera um relatório
-Markdown com os dados gerenciados da atlética.
+entidade do sistema. O `app.py` lê todos eles e gera um relatório Markdown com os
+dados gerenciados da atlética.
 
 ## Convenções
 
@@ -56,7 +56,7 @@ referenciam por chaves naturais:
 A partir da pasta `codigo/`:
 
 ```bash
-python app.py processar-csv
+python app.py
 ```
 
 Saída padrão: `codigo/data/relatorio_atletica.md`. Use `--dir` e `--output` para

@@ -135,19 +135,3 @@ class ResultadoOperacao:
     dados_gerados: dict[str, Any] | None = None
     erros: list[dict[str, Any]] | None = None
     alertas: list[str] = field(default_factory=list)
-
-    def para_dict(self) -> dict[str, Any]:
-        """Converte a saida para JSON serializavel."""
-        saida: dict[str, Any] = {
-            "exit_code": self.exit_code,
-            "status": self.status,
-            "timestamp_execucao": agora_iso(),
-            "comando": self.comando,
-        }
-        if self.dados_gerados is not None:
-            saida["dados_gerados"] = self.dados_gerados
-        if self.erros is not None:
-            saida["erros"] = self.erros
-        if self.alertas:
-            saida["alertas"] = self.alertas
-        return saida

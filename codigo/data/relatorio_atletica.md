@@ -1,6 +1,6 @@
 # Relatório de Dados da Atlética
 
-*Documento gerado automaticamente a partir dos formulários CSV em `/data`. Emitido em 2026-06-18T23:52:50.*
+*Documento gerado automaticamente a partir dos formulários CSV em `/data`. Emitido em 2026-06-19T14:22:28.*
 
 ## Atlética
 

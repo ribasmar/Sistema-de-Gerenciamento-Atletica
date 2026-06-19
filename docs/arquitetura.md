@@ -38,7 +38,7 @@ observadores na classe `Aplicacao`.
 | `importador_csv.py` | Lê os CSVs, resolve referências por chave natural e alimenta os serviços. |
 | `importador_html.py` | Extrai dados da declaração de matrícula (HTML) usando só a biblioteca padrão. |
 | `relatorio_md.py` | Gera o relatório Markdown a partir do estado da aplicação. |
-| `app.py` | CLI e composição (`Aplicacao`): menu interativo e comando `processar-csv`. |
+| `app.py` | CLI e composição (`Aplicacao`): processa CSVs e gera o relatório Markdown. |
 
 ## 3. Padrões de projeto
 

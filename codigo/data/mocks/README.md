@@ -27,5 +27,5 @@ Conteúdo:
 A partir da pasta `codigo/`:
 
 ```bash
-python app.py processar-csv --dir data/mocks --output data/mocks/relatorio_mock.md
+python app.py --dir data/mocks --output data/mocks/relatorio_mock.md
 ```

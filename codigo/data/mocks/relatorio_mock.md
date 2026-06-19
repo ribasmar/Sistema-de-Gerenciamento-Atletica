@@ -1,6 +1,6 @@
 # Relatório de Dados da Atlética
 
-*Documento gerado automaticamente a partir dos formulários CSV em `/data`. Emitido em 2026-06-18T21:15:18.*
+*Documento gerado automaticamente a partir dos formulários CSV em `/data`. Emitido em 2026-06-19T14:20:48.*
 
 ## Atlética
 
@@ -85,8 +85,8 @@
 
 ## Notificações
 
-- Treino atualizado: 6451d97d-3074-4ab7-87df-f5df0cf8e9a8 alterou localidade, horario_inicio, horario_fim.
-- Treino atualizado: b18d706e-e947-43c4-afe2-226ea609e53c alterou dia_semana, horario_inicio, horario_fim, status_treino.
+- Treino atualizado: 8e33fc3f-9e03-4833-b470-231de0bbb15f alterou localidade, horario_inicio, horario_fim.
+- Treino atualizado: 3c062d1a-e07a-4c48-989b-393da27c7288 alterou dia_semana, horario_inicio, horario_fim, status_treino.
 
 ## Log de Processamento
 

@@ -54,7 +54,7 @@ rejeitando caminho absoluto, *path traversal* e arquivos inexistentes.
   dedicado.
 - A leitura de arquivo do importador HTML (`ler_html`, `normalizar_caminho`,
   detecção de encoding) depende de I/O e não é coberta por teste automatizado.
-- `app.py` (CLI/menu) e o timestamp não determinístico de `ResultadoOperacao`
+- `app.py` (CLI) e o timestamp não determinístico de `ResultadoOperacao`
   não têm testes.
 - Não há medição formal de cobertura (ex.: `coverage.py`); a verificação é por
   exercício direto dos métodos.
