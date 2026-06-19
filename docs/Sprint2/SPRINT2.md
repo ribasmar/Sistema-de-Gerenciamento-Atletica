@@ -27,23 +27,22 @@ Para garantir um código Python limpo, testável e de fácil manutenção, utili
 - **Objetivo:** Isolar as regras de negócio das rotas (controllers/views) e do acesso a dados.
 - **Aplicação:** Toda a lógica descrita nas histórias de usuário, como verificar se um CPF/RA está duplicado ao cadastrar um membro ou validar se a data de fim de um campeonato não é anterior à de início, será encapsulada em classes ou módulos de _Service_.
 
+![Diagrama de Classes da Sprint 2](../Diagramas/service_layer.png)
+
 ### 2.2. Repository (Repositório)
 
 - **Objetivo:** Abstrair a lógica de acesso e manipulação do banco de dados (geralmente implementado junto a ORMs como SQLAlchemy).
 - **Aplicação:** Os repositórios serão responsáveis por receber os dicionários ou objetos mapeados (como o `id_atletica`, `documentos_universidade`, etc.) e persistir ou buscar as informações de Atletas, Treinos e Campeonatos sem que a camada de Serviço precise saber se o banco é PostgreSQL, MySQL, etc.
+
+![Diagrama de Classes da Sprint 2](../Diagramas/repository.png)
+
 
 ### 2.3. Observer (Observador)
 
 - **Objetivo:** Criar um mecanismo de notificação ou reação a eventos dentro do sistema de forma desacoplada (no Python, pode ser implementado via bibliotecas de sinais como `blinker` ou `Django Signals`).
 - **Aplicação:** Será utilizado para atualizar o status do sistema de forma reativa. Por exemplo, quando um _Treino_ for atualizado (mudança de horário ou localidade), um evento será disparado para notificar a lista de `atletas_inscritos` ou gerentes sobre a alteração, sem acoplar a lógica de notificação diretamente na função de atualização do treino.
 
----
-
-## 3. Diagrama de Classes: Arquitetura e Padrões de Projeto
-
-Abaixo está a representação estrutural focada exclusivamente na arquitetura e nos padrões de projeto adotados (Service Layer, Repository e Observer).
-
-![Diagrama de Classes da Sprint 2](./diagrama_design_patterns.png)
+![Diagrama de Classes da Sprint 2](../Diagramas/observer.png)
 
 ---
 
