@@ -10,7 +10,9 @@ from pathlib import Path
 from typing import Any
 
 from eventos import BarramentoEventos, CaixaNotificacoes
+from importador_csv import carregar_entidades
 from importador_html import importar_declaracao_html, normalizar_caminho
+from relatorio_md import gerar_markdown
 from repositorios import BancoMemoria
 from servicos import AtleticaService, CampeonatoService, PessoaService, TreinoService
 
@@ -107,124 +109,6 @@ def imprimir_vazio(rotulo: str) -> None:
 def imprimir_linha(chave: str, valor: str) -> None:
     """Imprime um campo alinhado em uma tela de resumo."""
     print(f"  {chave:<18} {valor}")
-
-
-def carregar_json(caminho: str) -> dict[str, Any]:
-    """Carrega um arquivo JSON."""
-    return json.loads(Path(caminho).read_text(encoding="utf-8"))
-
-
-def caminho_comprovante_matricula(documentos: list[dict[str, Any]]) -> str:
-    """Retorna o path do primeiro comprovante de matricula da lista."""
-    for documento in documentos:
-        if documento.get("tipo") == "comprovante_matricula" and documento.get("path"):
-            return str(documento["path"])
-    return ""
-
-
-def preencher_pessoa_com_html(
-    dados_pessoa: dict[str, Any],
-    campo_documentos: str,
-    campo_periodo: str,
-    campo_ingresso: str,
-) -> dict[str, Any]:
-    """Preenche dados academicos usando o HTML do comprovante de matricula."""
-    documentos = dados_pessoa.get(campo_documentos, [])
-    caminho = caminho_comprovante_matricula(documentos)
-    if not caminho:
-        return dados_pessoa
-
-    dados_html = importar_declaracao_html(caminho)
-    dados_pessoa["nome"] = dados_html["nome"]
-    dados_pessoa["ra"] = dados_html["ra"]
-    dados_pessoa["curso"] = dados_html["curso"]
-    dados_pessoa[campo_periodo] = int(numero_inicial(dados_html["periodo"], "1"))
-
-    ingresso = ingresso_para_data(dados_html["ingresso"])
-    if ingresso:
-        dados_pessoa[campo_ingresso] = ingresso
-
-    return dados_pessoa
-
-
-def executar_fluxo(dados: dict[str, Any]) -> None:
-    """Executa um fluxo completo a partir de dados estruturados."""
-    app = Aplicacao()
-
-    resultado_atletica = app.atleticas.inicializar(dados["atletica"])
-    imprimir(resultado_atletica.para_dict())
-    id_atletica = resultado_atletica.dados_gerados["id_atletica"]  # type: ignore[index]
-
-    atletas = [
-        preencher_pessoa_com_html(dict(atleta), "documentos", "periodo", "egresso")
-        for atleta in dados["atletas"]
-    ]
-    dados_atletas = {"id_atletica": id_atletica, "atletas": atletas}
-    resultado_atletas = app.pessoas.cadastrar_atletas(dados_atletas)
-    imprimir(resultado_atletas.para_dict())
-
-    atletas_por_ra = {
-        item["ra"]: item["id_atleta_gerado"]
-        for item in resultado_atletas.dados_gerados["importados"]  # type: ignore[index]
-    }
-
-    if "membro" in dados:
-        membro = preencher_pessoa_com_html(
-            dict(dados["membro"]),
-            "documentos_universidade",
-            "periodo_atual",
-            "inicio_egresso",
-        )
-        membro = {"id_atletica": id_atletica, **membro}
-        imprimir(app.pessoas.cadastrar_membro(membro).para_dict())
-
-    treinador = {"id_atletica": id_atletica, **dados["treinador"]}
-    resultado_treinador = app.pessoas.cadastrar_treinador(treinador)
-    imprimir(resultado_treinador.para_dict())
-    id_treinador = resultado_treinador.dados_gerados["id_treinador"]  # type: ignore[index]
-
-    treino = {
-        chave: valor
-        for chave, valor in dados["treino"].items()
-        if chave != "atletas_por_ra"
-    }
-    treino["id_atletica"] = id_atletica
-    treino["id_treinador"] = id_treinador
-    treino["atletas_inscritos"] = [
-        atletas_por_ra[ra] for ra in dados["treino"]["atletas_por_ra"]
-    ]
-    resultado_treino = app.treinos.criar(treino)
-    imprimir(resultado_treino.para_dict())
-    id_treino = resultado_treino.dados_gerados["id_treino"]  # type: ignore[index]
-
-    atualizacao = {
-        chave: valor
-        for chave, valor in dados["atualizacao_treino"].items()
-        if chave != "atletas_por_ra"
-    }
-    atualizacao["id_treino"] = id_treino
-    atualizacao["atletas_inscritos"] = [
-        atletas_por_ra[ra] for ra in dados["atualizacao_treino"]["atletas_por_ra"]
-    ]
-    imprimir(app.treinos.atualizar(atualizacao).para_dict())
-
-    campeonato = {
-        chave: valor
-        for chave, valor in dados["campeonato"].items()
-        if chave != "atletas_por_ra"
-    }
-    campeonato["id_atletica"] = id_atletica
-    campeonato["id_treinador_responsavel"] = id_treinador
-    campeonato["atletas_convocados"] = [
-        atletas_por_ra[ra] for ra in dados["campeonato"]["atletas_por_ra"]
-    ]
-    imprimir(app.campeonatos.criar(campeonato).para_dict())
-    imprimir({"notificacoes": app.notificacoes.mensagens})
-
-
-def executar_demo() -> None:
-    """Executa uma demonstracao completa no terminal."""
-    executar_fluxo(carregar_json(str(Path(__file__).with_name("dados_demo.json"))))
 
 
 def perguntar(rotulo: str, padrao: str = "") -> str:
@@ -790,14 +674,10 @@ def executar_menu(app: Aplicacao) -> None:
 def main() -> None:
     """Ponto de entrada da CLI."""
     parser = argparse.ArgumentParser(
-        description="Sistema de Gerenciamento de Atletica - Sprint 3"
+        description="Sistema de Gerenciamento de Atletica"
     )
     sub = parser.add_subparsers(dest="comando", required=True)
-    sub.add_parser("demo", help="Executa uma demonstracao completa")
     sub.add_parser("menu", help="Abre o menu interativo no terminal")
-
-    fluxo = sub.add_parser("executar-fluxo", help="Executa fluxo por JSON")
-    fluxo.add_argument("--input", required=True, help="Arquivo JSON de entrada")
 
     html = sub.add_parser(
         "importar-declaracao-html", help="Extrai dados de aluno de um HTML"
@@ -809,18 +689,27 @@ def main() -> None:
         help="Encoding do arquivo HTML; use auto para detectar pelo charset",
     )
 
-    cadastrar = sub.add_parser("inicializar-atletica")
-    cadastrar.add_argument("--input", required=True, help="Arquivo JSON de entrada")
+    pasta_dados = Path(__file__).with_name("data")
+    csv_cmd = sub.add_parser(
+        "processar-csv",
+        help="Le os CSVs das entidades e gera o relatorio Markdown da atletica",
+    )
+    csv_cmd.add_argument(
+        "--dir",
+        default=str(pasta_dados / "forms"),
+        help="Pasta com os CSVs das entidades",
+    )
+    csv_cmd.add_argument(
+        "--output",
+        default=str(pasta_dados / "relatorio_atletica.md"),
+        help="Arquivo Markdown de saida",
+    )
 
     args = parser.parse_args()
     app = Aplicacao()
 
-    if args.comando == "demo":
-        executar_demo()
-    elif args.comando == "menu":
+    if args.comando == "menu":
         executar_menu(app)
-    elif args.comando == "executar-fluxo":
-        executar_fluxo(carregar_json(args.input))
     elif args.comando == "importar-declaracao-html":
         imprimir(
             {
@@ -830,8 +719,10 @@ def main() -> None:
                 "dados_extraidos": importar_declaracao_html(args.input, args.encoding),
             }
         )
-    elif args.comando == "inicializar-atletica":
-        imprimir(app.atleticas.inicializar(carregar_json(args.input)).para_dict())
+    elif args.comando == "processar-csv":
+        resultados = carregar_entidades(app, args.dir)
+        Path(args.output).write_text(gerar_markdown(app, resultados), encoding="utf-8")
+        painel_status("OK", f"Relatorio Markdown gerado em: {args.output}")
 
 
 if __name__ == "__main__":

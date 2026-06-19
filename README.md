@@ -114,11 +114,21 @@ O sistema será utilizado principalmente por:
 
 ## Como Executar
 
-Fluxo completo por JSON:
+Os dados das entidades sao recebidos por arquivos CSV (um por entidade) na pasta
+`codigo/data/forms/`, como respostas de formulario. O processamento le esses CSVs
+e gera um relatorio Markdown com os dados gerenciados da atletica:
 
 ```bash
-python codigo/app.py executar-fluxo --input codigo/dados_demo.json
+python codigo/app.py processar-csv
 ```
+
+Saida padrao: `codigo/data/relatorio_atletica.md`. As colunas e convencoes de cada
+CSV estao documentadas em `codigo/data/forms/README.md`.
+
+A declaracao de matricula em HTML e enviada a parte: o CSV referencia o arquivo
+pela coluna `comprovante_matricula`, e o sistema le apenas arquivos contidos na
+pasta `codigo/data/` (sem caminho absoluto e sem path traversal). O CSV e a fonte
+autoritativa; o HTML apenas preenche campos academicos deixados em branco.
 
 Menu interativo:
 
@@ -126,11 +136,7 @@ Menu interativo:
 python codigo/app.py menu
 ```
 
-Ao cadastrar atleta ou membro pelo menu, e possivel enviar uma declaracao de
-matricula em HTML. Os dados extraidos do HTML nao sao pedidos novamente no
-cadastro.
-
-Importacao de declaracao de matricula em HTML:
+Importacao avulsa de declaracao de matricula em HTML:
 
 ```bash
 python codigo/app.py importar-declaracao-html --input codigo/declaracao_exemplo.html

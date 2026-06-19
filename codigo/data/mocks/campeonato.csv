@@ -1,0 +1,4 @@
+nome_campeonato,modalidades,treinador_cpf,atletas_ra,transporte_tipo,transporte_data_saida,transporte_data_retorno,data_inicio,data_fim,locais
+Copa Universitaria de Futsal,Futsal Masculino,90000000001,2310001;2310002;2310003;2310004;2310005;2310006;2310007;2310008;2310009;2310010;2310011;2310012,Onibus Fretado,2026-08-10T07:00:00Z,2026-08-12T22:00:00Z,2026-08-10,2026-08-12,Ginasio Municipal;Arena Central
+Liga Interatleticas de Futsal,Futsal Masculino,90000000001,2310004;2310005;2310006;2310007;2310008;2310009;2310010;2310011;2310012;2310013;2310014;2310015,Van Universitaria,2026-09-20T06:30:00Z,2026-09-21T23:00:00Z,2026-09-20,2026-09-21,Ginasio Regional
+Copa Universitaria de Volei,Volei Feminino,90000000002,2410001;2410002;2410003;2410004;2410005;2410006;2410007;2410008;2410009;2410010;2410011;2410012,Onibus Fretado,2026-10-05T08:00:00Z,2026-10-08T20:00:00Z,2026-10-05,2026-10-08,Ginasio Coberto;Complexo Esportivo

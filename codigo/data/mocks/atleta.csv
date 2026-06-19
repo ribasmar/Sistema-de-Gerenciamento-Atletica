@@ -1,0 +1,28 @@
+nome,ra,cpf,curso,nascimento,egresso,periodo,conclusao,esportes,comprovante_matricula
+Joao Pedro Silva,2310001,00000000001,Engenharia de Software,2004-01-15,2024-01-01,2,2027-12,Futsal Masculino,mocks/declaracoes/2310001.html
+Lucas Almeida Souza,2310002,00000000002,Engenharia Eletrica,2003-02-15,2024-01-01,3,2027-12,Futsal Masculino,mocks/declaracoes/2310002.html
+Gabriel Ferreira Lima,2310003,00000000003,Engenharia Civil,2002-03-15,2023-01-01,4,2027-12,Futsal Masculino,mocks/declaracoes/2310003.html
+Matheus Oliveira Costa,2310004,00000000004,Engenharia Mecanica,2001-04-15,2023-01-01,5,2027-12,Futsal Masculino,mocks/declaracoes/2310004.html
+Rafael Santos Rocha,2310005,00000000005,Engenharia de Producao,2000-05-15,2022-01-01,6,2027-12,Futsal Masculino,mocks/declaracoes/2310005.html
+Pedro Henrique Alves,2310006,00000000006,Administracao,2004-06-15,2022-01-01,7,2027-12,Futsal Masculino,mocks/declaracoes/2310006.html
+Bruno Carvalho Dias,2310007,00000000007,Ciencia da Computacao,2003-07-15,2021-01-01,8,2027-12,Futsal Masculino,mocks/declaracoes/2310007.html
+Felipe Araujo Melo,2310008,00000000008,Engenharia Quimica,2002-08-15,2021-01-01,9,2027-12,Futsal Masculino,mocks/declaracoes/2310008.html
+Gustavo Barbosa Pinto,2310009,00000000009,Engenharia de Software,2001-09-15,2024-01-01,2,2027-12,Futsal Masculino,mocks/declaracoes/2310009.html
+Vinicius Ramos Teixeira,2310010,00000000010,Engenharia Eletrica,2000-01-15,2024-01-01,3,2027-12,Futsal Masculino,mocks/declaracoes/2310010.html
+Thiago Nunes Cardoso,2310011,00000000011,Engenharia Civil,2004-02-15,2023-01-01,4,2027-12,Futsal Masculino,mocks/declaracoes/2310011.html
+Leonardo Martins Freitas,2310012,00000000012,Engenharia Mecanica,2003-03-15,2023-01-01,5,2027-12,Futsal Masculino,mocks/declaracoes/2310012.html
+Eduardo Gomes Moreira,2310013,00000000013,Engenharia de Producao,2002-04-15,2022-01-01,6,2027-12,Futsal Masculino,mocks/declaracoes/2310013.html
+Caio Ribeiro Azevedo,2310014,00000000014,Administracao,2001-05-15,2022-01-01,7,2027-12,Futsal Masculino,mocks/declaracoes/2310014.html
+Andre Luiz Fernandes,2310015,00000000015,Ciencia da Computacao,2000-06-15,2021-01-01,8,2027-12,Futsal Masculino,mocks/declaracoes/2310015.html
+Ana Clara Souza,2410001,00000000016,Engenharia Mecanica,2004-10-20,2024-01-01,2,2028-07,Volei Feminino,mocks/declaracoes/2410001.html
+Maria Eduarda Lima,2410002,00000000017,Engenharia de Producao,2003-11-20,2024-01-01,3,2028-07,Volei Feminino,mocks/declaracoes/2410002.html
+Beatriz Oliveira Costa,2410003,00000000018,Administracao,2002-10-20,2023-01-01,4,2028-07,Volei Feminino,mocks/declaracoes/2410003.html
+Julia Santos Rocha,2410004,00000000019,Ciencia da Computacao,2001-11-20,2023-01-01,5,2028-07,Volei Feminino,mocks/declaracoes/2410004.html
+Larissa Alves Pereira,2410005,00000000020,Engenharia Quimica,2000-10-20,2022-01-01,6,2028-07,Volei Feminino,mocks/declaracoes/2410005.html
+Camila Carvalho Dias,2410006,00000000021,Engenharia de Software,2004-11-20,2022-01-01,7,2028-07,Volei Feminino,mocks/declaracoes/2410006.html
+Fernanda Araujo Melo,2410007,00000000022,Engenharia Eletrica,2003-10-20,2021-01-01,8,2028-07,Volei Feminino,mocks/declaracoes/2410007.html
+Mariana Barbosa Pinto,2410008,00000000023,Engenharia Civil,2002-11-20,2021-01-01,9,2028-07,Volei Feminino,mocks/declaracoes/2410008.html
+Leticia Ramos Teixeira,2410009,00000000024,Engenharia Mecanica,2001-10-20,2024-01-01,2,2028-07,Volei Feminino,mocks/declaracoes/2410009.html
+Gabriela Nunes Cardoso,2410010,00000000025,Engenharia de Producao,2000-11-20,2024-01-01,3,2028-07,Volei Feminino,mocks/declaracoes/2410010.html
+Isabela Martins Freitas,2410011,00000000026,Administracao,2004-10-20,2023-01-01,4,2028-07,Volei Feminino,mocks/declaracoes/2410011.html
+Amanda Gomes Moreira,2410012,00000000027,Ciencia da Computacao,2003-11-20,2023-01-01,5,2028-07,Volei Feminino,mocks/declaracoes/2410012.html
